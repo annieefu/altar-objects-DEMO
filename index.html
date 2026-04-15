@@ -45,14 +45,19 @@
     <button type="button" onclick="alert('Hello world!')">Click Me!</button>
 
     <!-- This is an example of loading an image from your local files -->
-    <img src="images/object-1.png"></img>
-    <img src="images/object-2.png"></img>
+     <div class="image-box">
+    <img class="position-example-image" src="images/object-1.png"></img>
+    <img class="position-example-image-2" src="images/object-2.png"></img>
     <img src="images/object-3.png"></img>
     <img src="images/object-4.png"></img>
     <img src="images/object-5.png"></img>
     <img src="images/object-6.png"></img>
     <img src="images/object-7.png"></img>
     <img src="images/object-8.png"></img>
+     </div>
+
+
+
 
     <!-- Below is an example of loading an image from the internet -->
     <!-- <img src="https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/jackson-so-_t-l5FFH8VA-unsplash.jpg"></img> -->
@@ -64,14 +69,40 @@
 <style>
     /* This is where all your CSS goes */
 
+    .image-box{
+        border: 2px solid gray;
+        /* opacity: .7; */
+    }
+
+
+
+    .position-example-image {
+        position: relative; /* or position absolute, fixed, or sticky */
+        top: 500px;
+        left: 60px;
+    }
+    .position-example-image-2 {
+        position: relative;
+        top: 50vh; /*this is viewport height */
+        left: 10vw;
+    }
+
     img {
         width: 100px;
         height: 100px;
-
+        opacity: .7;
+    }
+    img:hover{
+        opacity: 1;
+        cursor: pointer;
     }
 
     .page-heading {
         font-family: 'Cabin', sans-serif;
+    }
+
+    *{
+        cursor: help;
     }
 </style>
 
